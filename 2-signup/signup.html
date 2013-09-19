@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+    <title>signup</title>
+</head>
+<body>
+
+<h1>signup</h1>
+
+<form method="post">
+
+    <input name="username" autofocus="true" placeholder="username" value="{{username}}"/>
+    {{username_error}}<br>
+
+    <input name="password" type="password" placeholder="password" />
+    {{password_error}}<br>
+
+    <input name="verify" type="password" placeholder="password again" />
+    {{verify_error}}<br>
+
+    <input name="email" type="email" placeholder="email (optional)" value="{{email}}" />
+    {{email_error}}<br>
+
+    <input type="submit">
+
+</form>
+
+</body>
+</html>
+{% endautoescape %}

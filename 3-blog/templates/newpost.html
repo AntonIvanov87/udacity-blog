@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Anton Ivanov blog - New post</title>
+    <link rel="stylesheet" href="http://yandex.st/bootstrap/3.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+
+<h1>New post</h1>
+
+<form method="post" role="form">
+
+    <div class="form-group {{ 'has-error' if subject_error else '' }}">
+        <input name="subject" class="form-control" placeholder="subject" autofocus="true" value="{{subject}}"/>
+        <p class="text-danger">{{subject_error}}</p>
+    </div>
+
+    <div class="form-group {{ 'has-error' if content_error else '' }}">
+        <textarea name="content" class="form-control" placeholder="content">{{content}}</textarea>
+        <p class="text-danger">{{content_error}}</p>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+</div>
+</body>
+</html>
